@@ -1,10 +1,11 @@
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = KakaoTalkToolsPrefs
-KakaoTalkToolsPrefs_FILES = KTTRootListController.m
-KakaoTalkToolsPrefs_INSTALL_PATH = /Library/PreferenceBundles
-KakaoTalkToolsPrefs_FRAMEWORKS = UIKit
-KakaoTalkToolsPrefs_PRIVATE_FRAMEWORKS = Preferences
+$(BUNDLE_NAME)_FILES = KTTRootListController.m
+$(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
+$(BUNDLE_NAME)_FRAMEWORKS = UIKit
+$(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
+$(BUNDLE_NAME)_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 

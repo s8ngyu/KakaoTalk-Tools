@@ -1,21 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>entry</key>
-	<dict>
-		<key>bundle</key>
-		<string>KakaoTalkToolsPrefs</string>
-		<key>cell</key>
-		<string>PSLinkCell</string>
-		<key>detail</key>
-		<string>KTTRootListController</string>
-		<key>icon</key>
-		<string>icon.png</string>
-		<key>isController</key>
-		<true/>
-		<key>label</key>
-		<string>KakaoTalk Tools</string>
-	</dict>
-</dict>
-</plist>
+{
+    entry = {
+	bundle = KakaoTalkToolsPrefs;
+	cell = PSLinkCell;
+	detail = KTTRootListController;
+	icon = icon.png;
+	isController = 1;
+	label = "KakaoTalk Tools";
+    };
+}
