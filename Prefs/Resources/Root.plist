@@ -37,10 +37,34 @@
 			<key>key</key>
 			<string>kDarkKeyBoard</string>
 			<key>label</key>
-			<string>Dark Keyboard</string>
+			<string>Enable Dark Keyboard</string>
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
+
+		<dict>
+	    <key>cell</key>
+    	<string>PSButtonCell</string>
+    	<key>label</key>
+    	<string>Terminate KakaoTalk</string>
+    	<key>action</key>
+    	<string>killkakaotalk</string>
+    </dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+
+		<dict>
+	    <key>cell</key>
+    	<string>PSButtonCell</string>
+    	<key>label</key>
+    	<string>Respring</string>
+    	<key>action</key>
+    	<string>respring</string>
+    </dict>
+
 
 	</array>
 	<key>title</key>

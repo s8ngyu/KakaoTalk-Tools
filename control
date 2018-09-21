@@ -1,6 +1,6 @@
 Package: com.peterdev.kakaotalktools
 Name: KakaoTalk Tools
-Depends: mobilesubstrate
+Depends: mobilesubstrate, preferenceloader
 Version: 0.0.1
 Architecture: iphoneos-arm
 Description: An awesome MobileSubstrate tweak!
