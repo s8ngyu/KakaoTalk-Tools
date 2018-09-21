@@ -1,8 +1,9 @@
-static BOOL Storage = NO; // Default value
+static BOOL kStorage = NO; // Default value
+static BOOL kDarkKeyBoard = NO;
 
 %hook KAODiskMonitor
 - (long long)freeSpaceInBytes {
-    if(Storage)
+    if(kStorage)
     {
         return 256000000000;
     }
@@ -10,12 +11,25 @@ static BOOL Storage = NO; // Default value
 }
 %end
 
+%hook UITextInputTraits
+- (int)keyboardAppearance {
+  if(kDarkKeyBoard)
+  {
+    return 1;
+  }
+    return %orig;
+}
+%end
+
+
+
 static void loadPrefs()
 {
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
     if(prefs)
     {
-        Storage = ( [prefs objectForKey:@"kStorage"] ? [[prefs objectForKey:@"kStorage"] boolValue] : Storage );
+        kStorage = ( [prefs objectForKey:@"kStorage"] ? [[prefs objectForKey:@"kStorage"] boolValue] : kStorage );
+        kDarkKeyBoard = ( [prefs objectForKey:@"kDarkKeyBoard"] ? [[prefs objectForKey:@"kDarkKeyBoard"] boolValue] : kDarkKeyBoard );
     }
     [prefs release];
 }
