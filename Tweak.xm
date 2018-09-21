@@ -1,17 +1,27 @@
-#define PLIST_PATH @"/var/mobile/Library/Preferences/KakaoTalkToolsPrefs.plist" //plist of preference bundle
+static BOOL Storage = NO; // Default value
 
-inline bool GetPrefBool(NSString *key)
+%hook KAODiskMonitor
+- (long long)freeSpaceInBytes {
+    if(Storage)
+    {
+        return 256000000000;
+    }
+    return %orig;
+}
+%end
+
+static void loadPrefs()
 {
-return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue];
+    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
+    if(prefs)
+    {
+        Storage = ( [prefs objectForKey:@"kStorage"] ? [[prefs objectForKey:@"kStorage"] boolValue] : Storage );
+    }
+    [prefs release];
 }
 
-
-//Start Class
-%hook KAODiskMonitor               //카카오톡 디스크 모니터 후크
-- (long long)freeSpaceInBytes {    //카카오톡 탈옥 우회시 350MB 알림 제거
-  if(GetPrefBool(@"kStorage")){    //kStorage를 받으면 작동
-    return 256000000000;
-  }
-    return %orig;
-  }
-%end
+%ctor
+{
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.peterdev.kakaotalktools/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+    loadPrefs();
+}

@@ -14,13 +14,15 @@
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>com.peterdev.kakaotalktools</string>
 			<key>key</key>
-			<string>kStorage</string>
+			<string>Storage</string>
 			<key>label</key>
 			<string>Remove 350MB Alert</string>
+			<key>PostNotification</key>
+			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
 	</array>
 	<key>title</key>
