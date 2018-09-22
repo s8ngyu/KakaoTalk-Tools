@@ -55,6 +55,14 @@
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
 		<dict>
+			<key>action</key>
+			<string>killkakaotalk:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Apply Changes</string>
+		</dict>
+		<dict>
     	<key>action</key>
     	<string>respring:</string>
     	<key>cell</key>
