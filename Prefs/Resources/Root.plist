@@ -35,6 +35,8 @@
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Features</string>
+			<key>footerText</key>
+			<string>You might need to Apply Changes twice.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -61,6 +63,20 @@
 			<string>kDarkKeyBoard</string>
 			<key>label</key>
 			<string>Enable Dark Keyboard</string>
+			<key>PostNotification</key>
+			<string>com.peterdev.kakaotalktools/settingschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.peterdev.kakaotalktools</string>
+			<key>key</key>
+			<string>kSnowFlake</string>
+			<key>label</key>
+			<string>Enable Always Snowy Chatroom</string>
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
@@ -133,7 +149,7 @@
 	<key>cell</key>
 	<string>PSGroupCell</string>
 	<key>footerText</key>
-	<string>KakaoTalk Tools v1.0 by PeterDev</string>
+	<string>KakaoTalk Tools v1.1 by PeterDev</string>
 	<key>isStaticText</key>
 	<true/>
 </dict>
