@@ -5,10 +5,14 @@
 	<key>items</key>
 	<array>
 
-<!--Profile-->
+<!--Credits-->
 		<dict>
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
+			<key>big</key>
+			<true/>
+			<key>height</key>
+			<integer>56</integer>
 			<key>label</key>
 			<string>PeterDev</string>
 			<key>user</key>
@@ -22,7 +26,6 @@
 			<key>label</key>
 			<string>Features</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
@@ -33,11 +36,10 @@
 			<key>key</key>
 			<string>kStorage</string>
 			<key>label</key>
-			<string>Remove 350MB Alert</string>
+			<string>Remove Storage Limit Alert</string>
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
@@ -52,17 +54,43 @@
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
+		<dict>
+    	<key>action</key>
+    	<string>respring:</string>
+    	<key>cell</key>
+    	<string>PSButtonCell</string>
+			<key>isDestructive</key>
+      <true />
+      <key>confirmation</key>
+      <dict>
+      	<key>prompt</key>
+       	<string>Are you sure you want to respring?</string>
+       	<key>title</key>
+      	<string>OK</string>
+      	<key>okTitle</key>
+    	  <string>OK</string>
+      	<key>cancelTitle</key>
+      	<string>Cancel</string>
+      </dict>
+    	<key>label</key>
+    	<string>Respring</string>
+    </dict>
 
-<!--Credits-->
+<!--Links-->
 <dict>
 	<key>cell</key>
 	<string>PSGroupCell</string>
-	<key>footerText</key>
-	<string>KakaoTalk Tools by PeterDev</string>
-	<key>isStaticText</key>
-	<true/>
+	<key>label</key>
+	<string>Links</string>
 </dict>
-
+<dict>
+	<key>cellClass</key>
+	<string>HBTwitterCell</string>
+	<key>label</key>
+	<string>Nexus Repository</string>
+	<key>user</key>
+	<string>iosnexusrepo</string>
+</dict>
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
@@ -81,10 +109,16 @@
 	<key>subtitle</key>
 	<string>Support me!</string>
 	<key>url</key>
-	<string>https://paypal.me/peterdev</string>
+	<string>https://paypal.me/peterdev/</string>
 </dict>
-
-
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>footerText</key>
+	<string>KakaoTalk Tools by PeterDev</string>
+	<key>isStaticText</key>
+	<true/>
+</dict>
 	</array>
 	<key>title</key>
 	<string>KakaoTalk Tools</string>
