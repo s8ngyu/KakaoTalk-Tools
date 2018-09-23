@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FEATURES</key>
+	<string>기능</string>
+</dict>
+<dict>
+	<key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
+	<string>일부 설정은 변경사항 적용을 두번하셔야 할 수 있습니다.</string>
+</dict>
+<dict>
+	<key>FEATURES</key>
+	<string>기능</string>
+</dict>
+<dict>
+	<key>REMOVE_STORAGE_LIMIT_ALERT</key>
+	<string>저장공간 부족 알림 제거</string>
+</dict>
+<dict>
+	<key>ENABLE_DARK_KEYBOARD</key>
+	<string>키보드 다크모드 활성화</string>
+</dict>
+<dict>
+	<key>ENABLE_SNOW_FLAKE</key>
+	<string>항상 눈오는 채팅방 활성화</string>
+</dict>
+<dict>
+	<key>APPLY_CHANGES</key>
+	<string>변경사항 적용</string>
+</dict>
+<dict>
+	<key>ARE_YOU_SURE_TO_RESPRING</key>
+	<string>정말로 리스프링 하시겠습니까?</string>
+</dict>
+<dict>
+	<key>OK</key>
+	<string>확인</string>
+</dict>
+<dict>
+	<key>OK_TITLE</key>
+	<string>확인</string>
+</dict>
+<dict>
+	<key>CANCEL</key>
+	<string>취소</string>
+</dict>
+<dict>
+	<key>RESPRING</key>
+	<string>리스프링</string>
+</dict>
+<dict>
+	<key>LINKS</key>
+	<string>링크</string>
+</dict>
+<dict>
+	<key>SOURCE_CODE</key>
+	<string>소스 코드</string>
+</dict>
+<dict>
+	<key>DONATE_TO_PETERDEV</key>
+	<string>PeterDev에게 기부하기</string>
+</dict>
+<dict>
+	<key>SUPPORT_ME</key>
+	<string>지원해주세요!</string>
+</dict>
+</plist>
