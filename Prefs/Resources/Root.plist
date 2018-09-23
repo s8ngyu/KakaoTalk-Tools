@@ -36,7 +36,7 @@
 			<key>label</key>
 			<string>Features</string>
 			<key>footerText</key>
-			<string>You might need to Apply Changes twice.</string>
+			<string>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -48,7 +48,7 @@
 			<key>key</key>
 			<string>kStorage</string>
 			<key>label</key>
-			<string>Remove Storage Limit Alert</string>
+			<string>REMOVE_STORAGE_ALERT</string>
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
@@ -62,7 +62,7 @@
 			<key>key</key>
 			<string>kDarkKeyBoard</string>
 			<key>label</key>
-			<string>Enable Dark Keyboard</string>
+			<string>ENABLE_DARK_KEYBOARD</string>
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
@@ -76,7 +76,7 @@
 			<key>key</key>
 			<string>kSnowFlake</string>
 			<key>label</key>
-			<string>Enable Always Snowy Chatroom</string>
+			<string>ENABLE_SNOW_FLAKE</string>
 			<key>PostNotification</key>
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
@@ -86,7 +86,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Apply Changes</string>
+			<string>APPLY_CHANGES</string>
 		</dict>
 		<dict>
     	<key>action</key>
@@ -98,16 +98,16 @@
       <key>confirmation</key>
       <dict>
       	<key>prompt</key>
-       	<string>Are you sure you want to respring?</string>
+       	<string>ARE_YOU_SURE_TO_RESPRING</string>
        	<key>title</key>
       	<string>OK</string>
       	<key>okTitle</key>
-    	  <string>OK</string>
+    	  <string>OK_TITLE</string>
       	<key>cancelTitle</key>
-      	<string>Cancel</string>
+      	<string>CANCEL</string>
       </dict>
     	<key>label</key>
-    	<string>Respring</string>
+    	<string>RESPRING</string>
     </dict>
 
 <!--Links-->
@@ -115,7 +115,7 @@
 	<key>cell</key>
 	<string>PSGroupCell</string>
 	<key>label</key>
-	<string>Links</string>
+	<string>LINKS</string>
 </dict>
 <dict>
 	<key>cellClass</key>
@@ -131,7 +131,7 @@
 	<key>label</key>
 	<string>Github</string>
 	<key>subtitle</key>
-	<string>Source code</string>
+	<string>SOURCE_CODE</string>
 	<key>url</key>
 	<string>https://github.com/peterprd/KakaoTalk-Tools</string>
 </dict>
@@ -139,9 +139,9 @@
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
 	<key>label</key>
-	<string>Donate to PeterDev</string>
+	<string>DONATE_TO_PETERDEV</string>
 	<key>subtitle</key>
-	<string>Support me!</string>
+	<string>SUPPORT_ME</string>
 	<key>url</key>
 	<string>https://paypal.me/peterdev/</string>
 </dict>
