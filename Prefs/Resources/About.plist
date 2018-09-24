@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+
+<!--Credits-->
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>label</key>
+	<string>CONTRIBUTORS</string>
+</dict>
+<dict>
+	<key>cellClass</key>
+	<string>HBTwitterCell</string>
+	<key>label</key>
+	<string>Nexus Repository</string>
+	<key>user</key>
+	<string>iosnexusrepo</string>
+</dict>
+
+<!--Links-->
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>label</key>
+	<string>LINKS</string>
+</dict>
+<dict>
+	<key>cellClass</key>
+	<string>HBLinkTableCell</string>
+	<key>label</key>
+	<string>Github</string>
+	<key>subtitle</key>
+	<string>SOURCE_CODE</string>
+	<key>url</key>
+	<string>https://github.com/peterprd/KakaoTalk-Tools</string>
+</dict>
+<dict>
+	<key>cellClass</key>
+	<string>HBLinkTableCell</string>
+	<key>label</key>
+	<string>DONATE_TO_PETERDEV</string>
+	<key>subtitle</key>
+	<string>SUPPORT_ME</string>
+	<key>url</key>
+	<string>https://paypal.me/peterdev/</string>
+</dict>
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>footerText</key>
+	<string>KakaoTalk Tools v1.3 by PeterDev</string>
+	<key>isStaticText</key>
+	<true/>
+</dict>
+	</array>
+	<key>title</key>
+	<string>CONTRIBUTORS</string>
+</dict>
+</plist>

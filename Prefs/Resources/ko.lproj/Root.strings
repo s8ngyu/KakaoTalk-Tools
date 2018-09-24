@@ -36,6 +36,8 @@
 	<string>정말로 설정을 기본값으로 돌리시겠습니까? 이 행동은 되돌릴 수 없습니다.</string>
 	<key>RESET_PREFS</key>
 	<string>설정을 기본값으로 돌리고 리스프링</string>
+	<key>CONTRIBUTORS</key>
+	<string>기여자</string>
 </dict>
 
 </plist>

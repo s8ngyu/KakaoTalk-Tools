@@ -36,6 +36,8 @@
 	<string>Are you sure you want to restore default settings? It cannot be undone.</string>
 	<key>RESET_PREFS</key>
 	<string>Restore default settings and respring </string>
+	<key>CONTRIBUTORS</key>
+	<string>Contributors</string>
 </dict>
 
 </plist>

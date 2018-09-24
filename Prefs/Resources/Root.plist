@@ -138,12 +138,14 @@
 	<string>LINKS</string>
 </dict>
 <dict>
-	<key>cellClass</key>
-	<string>HBTwitterCell</string>
+	<key>cell</key>
+	<string>PSLinkCell</string>
+	<key>detail</key>
+	<string>KTTAboutListController</string>
+	<key>isController</key>
+	<true/>
 	<key>label</key>
-	<string>Nexus Repository</string>
-	<key>user</key>
-	<string>iosnexusrepo</string>
+	<string>CONTRIBUTORS</string>
 </dict>
 <dict>
 	<key>cellClass</key>

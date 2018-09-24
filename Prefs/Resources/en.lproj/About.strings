@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<string>Links</string>
+	<key>SOURCE_CODE</key>
+	<string>Source code</string>
+	<key>DONATE_TO_PETERDEV</key>
+	<string>Donate to PeterDev</string>
+	<key>SUPPORT_ME</key>
+	<string>Support me!</string>
+	<key>CONTRIBUTORS</key>
+	<string>Contributors</string>
+</dict>
+
+</plist>
