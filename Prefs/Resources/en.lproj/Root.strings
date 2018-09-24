@@ -32,6 +32,10 @@
 	<string>Donate to PeterDev</string>
 	<key>SUPPORT_ME</key>
 	<string>Support me!</string>
+	<key>ARE_YOU_SURE_TO_RESET_PREFS</key>
+	<string>Are you sure you want to restore default settings? It cannot be undone.</string>
+	<key>RESET_PREFS</key>
+	<string>Restore default settings and respring </string>
 </dict>
 
 </plist>

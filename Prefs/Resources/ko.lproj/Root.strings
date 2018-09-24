@@ -32,6 +32,10 @@
 	<string>PeterDev에게 기부하기</string>
 	<key>SUPPORT_ME</key>
 	<string>지원해주세요!</string>
+	<key>ARE_YOU_SURE_TO_RESET_PREFS</key>
+	<string>정말로 설정을 기본값으로 돌리시겠습니까? 이 행동은 되돌릴 수 없습니다.</string>
+	<key>RESET_PREFS</key>
+	<string>설정을 기본값으로 돌리고 리스프링</string>
 </dict>
 
 </plist>

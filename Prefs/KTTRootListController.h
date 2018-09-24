@@ -7,5 +7,7 @@
 
 
 @interface KTTRootListController : HBRootListController
-
+    - (void)killkakaotalk:(id)sender;
+    - (void)resetprefs:(id)sender;
+    - (void)respring:(id)sender;
 @end

@@ -28,6 +28,13 @@
     posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
 }
 
+- (void)resetprefs:(id)sender {
+    HBPreferences *prefs = [[HBPreferences alloc] initWithIdentifier:@"com.peterdev.kakaotalktools"];
+    [prefs removeAllObjects];
+
+    [self respring:sender];
+}
+
 - (void)respring:(id)sender {
 	pid_t pid;
     const char* args[] = {"killall", "backboardd", NULL};
