@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>DEVELOPER</key>
+  <string>Developer</string>
 	<key>FEATURES</key>
 	<string>Features</string>
 	<key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
