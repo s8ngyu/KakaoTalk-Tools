@@ -41,3 +41,16 @@
     posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
 }
 @end
+
+@interface KTTAboutListController : HBRootListController
+@end
+
+@implementation KTTAboutListController
+- (id)specifiers {
+    if (_specifiers == nil) {
+        _specifiers = [[self loadSpecifiersFromPlistName:@"About" target:self] retain];
+    }
+
+    return _specifiers;
+}
+@end

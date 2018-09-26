@@ -6,7 +6,7 @@
 #import <spawn.h>
 
 
-@interface KTTAboutListController : HBAboutListController
+@interface KTTAboutListController : HBRootListController
 
 
 @end
