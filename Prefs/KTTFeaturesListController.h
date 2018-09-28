@@ -6,8 +6,7 @@
 #import <spawn.h>
 
 
-@interface KTTRootListController : HBRootListController
+@interface KTTFeaturesListController : HBRootListController
     - (void)killkakaotalk:(id)sender;
     - (void)respring:(id)sender;
-    - (void)resetprefs:(id)sender;
 @end

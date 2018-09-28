@@ -42,13 +42,28 @@
 }
 @end
 
+
+
 @interface KTTAboutListController : HBRootListController
+@end
+
+@interface KTTFeaturesListController : HBRootListController
 @end
 
 @implementation KTTAboutListController
 - (id)specifiers {
     if (_specifiers == nil) {
         _specifiers = [[self loadSpecifiersFromPlistName:@"About" target:self] retain];
+    }
+
+    return _specifiers;
+}
+@end
+
+@implementation KTTFeaturesListController
+- (id)specifiers {
+    if (_specifiers == nil) {
+        _specifiers = [[self loadSpecifiersFromPlistName:@"Features" target:self] retain];
     }
 
     return _specifiers;

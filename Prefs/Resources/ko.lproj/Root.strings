@@ -6,30 +6,24 @@
   <string>개발자</string>
 	<key>FEATURES</key>
 	<string>기능</string>
-	<key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
-	<string>일부 설정은 변경사항 적용을 두번하셔야 할 수 있습니다.</string>
   <key>ENABLE</key>
   <string>활성화</string>
-	<key>REMOVE_STORAGE_LIMIT_ALERT</key>
-	<string>저장공간 부족 알림 제거</string>
-	<key>ENABLE_DARK_KEYBOARD</key>
-  <string>키보드 다크모드 활성화</string>
-	<key>ENABLE_SNOW_FLAKE</key>
-	<string>항상 눈오는 채팅방 활성화</string>
-  <key>HIDE_GAME_TAB</key>
-  <string>게임탭 숨기기</string>
-	<key>APPLY_CHANGES</key>
-	<string>변경사항 적용</string>
-	<key>ARE_YOU_SURE_TO_RESPRING</key>
-	<string>정말로 리스프링 하시겠습니까?</string>
-	<key>OK</key>
-	<string>확인</string>
-	<key>OK_TITLE</key>
-	<string>확인</string>
-	<key>CANCEL</key>
-	<string>취소</string>
-	<key>RESPRING</key>
+  <key>APPLY_CHANGES</key>
+  <string>변경사항 적용</string>
+  <key>ARE_YOU_SURE_TO_RESPRING</key>
+  <string>정말로 리스프링 하시겠습니까?</string>
+  <key>OK</key>
+  <string>확인</string>
+  <key>OK_TITLE</key>
+  <string>확인</string>
+  <key>CANCEL</key>
+  <string>취소</string>
+  <key>RESPRING</key>
   <string>리스프링</string>
+  <key>ARE_YOU_SURE_TO_RESET_PREFS</key>
+	<string>정말로 설정을 기본값으로 돌리시겠습니까? 이 행동은 되돌릴 수 없습니다.</string>
+	<key>RESET_PREFS</key>
+	<string>설정을 기본값으로 돌리고 리스프링</string>
 	<key>LINKS</key>
 	<string>링크</string>
 	<key>SOURCE_CODE</key>
@@ -38,10 +32,6 @@
 	<string>PeterDev에게 기부하기</string>
 	<key>SUPPORT_ME</key>
 	<string>지원해주세요!</string>
-	<key>ARE_YOU_SURE_TO_RESET_PREFS</key>
-	<string>정말로 설정을 기본값으로 돌리시겠습니까? 이 행동은 되돌릴 수 없습니다.</string>
-	<key>RESET_PREFS</key>
-	<string>설정을 기본값으로 돌리고 리스프링</string>
 	<key>CONTRIBUTORS</key>
 	<string>기여자</string>
 </dict>

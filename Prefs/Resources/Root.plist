@@ -56,71 +56,22 @@
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
 
-<!--Features-->
-
+		<!--Features-->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>FEATURES</string>
-			<key>footerText</key>
-			<string>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.peterdev.kakaotalktools</string>
-			<key>key</key>
-			<string>kStorage</string>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>KTTFeaturesListController</string>
+			<key>isController</key>
+			<true/>
 			<key>label</key>
-			<string>REMOVE_STORAGE_LIMIT_ALERT</string>
-			<key>PostNotification</key>
-			<string>com.peterdev.kakaotalktools/settingschanged</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.peterdev.kakaotalktools</string>
-			<key>key</key>
-			<string>kDarkKeyBoard</string>
-			<key>label</key>
-			<string>ENABLE_DARK_KEYBOARD</string>
-			<key>PostNotification</key>
-			<string>com.peterdev.kakaotalktools/settingschanged</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.peterdev.kakaotalktools</string>
-			<key>key</key>
-			<string>kSnowFlake</string>
-			<key>label</key>
-			<string>ENABLE_SNOW_FLAKE</string>
-			<key>PostNotification</key>
-			<string>com.peterdev.kakaotalktools/settingschanged</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.peterdev.kakaotalktools</string>
-			<key>key</key>
-			<string>kHideGameTab</string>
-			<key>label</key>
-			<string>HIDE_GAME_TAB</string>
-			<key>PostNotification</key>
-			<string>com.peterdev.kakaotalktools/settingschanged</string>
+			<string>FEATURES</string>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -131,26 +82,26 @@
 			<string>APPLY_CHANGES</string>
 		</dict>
 		<dict>
-    	<key>action</key>
-    	<string>respring:</string>
-    	<key>cell</key>
-    	<string>PSButtonCell</string>
+			<key>action</key>
+			<string>respring:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
 			<key>isDestructive</key>
-      <true />
-      <key>confirmation</key>
-      <dict>
-      	<key>prompt</key>
-       	<string>ARE_YOU_SURE_TO_RESPRING</string>
-       	<key>title</key>
-      	<string>OK</string>
-      	<key>okTitle</key>
-    	  <string>OK_TITLE</string>
-      	<key>cancelTitle</key>
-      	<string>CANCEL</string>
-      </dict>
-    	<key>label</key>
-    	<string>RESPRING</string>
-    </dict>
+			<true />
+			<key>confirmation</key>
+			<dict>
+				<key>prompt</key>
+				<string>ARE_YOU_SURE_TO_RESPRING</string>
+				<key>title</key>
+				<string>OK</string>
+				<key>okTitle</key>
+				<string>OK_TITLE</string>
+				<key>cancelTitle</key>
+				<string>CANCEL</string>
+			</dict>
+			<key>label</key>
+			<string>RESPRING</string>
+		</dict>
 		<dict>
 			<key>action</key>
 			<string>resetprefs:</string>
@@ -172,6 +123,8 @@
 			<key>label</key>
 			<string>RESET_PREFS</string>
 		</dict>
+
+
 <!--Links-->
 <dict>
 	<key>cell</key>
