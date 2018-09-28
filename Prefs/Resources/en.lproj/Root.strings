@@ -8,12 +8,16 @@
 	<string>Features</string>
 	<key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
 	<string>You might need to Apply Changes twice.</string>
+  <key>ENABLE</key>
+  <string>Enable</string>
 	<key>REMOVE_STORAGE_LIMIT_ALERT</key>
 	<string>Remove Storage Limit Alert</string>
 	<key>ENABLE_DARK_KEYBOARD</key>
   <string>Enable Dark Keyboard</string>
 	<key>ENABLE_SNOW_FLAKE</key>
 	<string>Enable Always Snowy Chatroom</string>
+  <key>HIDE_GAME_TAB</key>
+  <string>Hide Game Tab</string>
 	<key>APPLY_CHANGES</key>
 	<string>Apply Changes</string>
 	<key>ARE_YOU_SURE_TO_RESPRING</key>

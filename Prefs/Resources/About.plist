@@ -52,7 +52,7 @@
 	<key>cell</key>
 	<string>PSGroupCell</string>
 	<key>footerText</key>
-	<string>KakaoTalk Tools v1.3 by PeterDev</string>
+	<string>KakaoTalk Tools v2.0 by PeterDev</string>
 	<key>isStaticText</key>
 	<true/>
 </dict>
