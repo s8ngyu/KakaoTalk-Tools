@@ -37,7 +37,7 @@
   <key>TWEAK_SETTING</key>
   <string>Tweak Setting</string>
   <key>E_MAIL</key>
-  <string>Send an e-mail.</string>
+  <string>Send an E-mail to us</string>
   <key>SEND_BUG_TO_ME</key>
   <string>Send us bugs, problems or ideas.</string>
 </dict>

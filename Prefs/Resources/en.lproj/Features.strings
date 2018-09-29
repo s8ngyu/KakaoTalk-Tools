@@ -13,7 +13,11 @@
 	<key>ENABLE_SNOW_FLAKE</key>
 	<string>Enable Always Snowy Chatroom</string>
   <key>HIDE_GAME_TAB</key>
-  <string>Hide Game Tab</string>
+  <string>Hide Game Star Tab</string>
+	<key>HIDE_SHARP_SEARCH</key>
+	<string>Hide #Search in the Text Field</string>
+	<key>HIDE_BIRTHDAY_FRIENDS</key>
+	<string>Hide a Section of Today's Birthday Friends</string>
 	<key>APPLY_CHANGES</key>
 	<string>Apply Changes</string>
 	<key>ARE_YOU_SURE_TO_RESPRING</key>
@@ -34,8 +38,8 @@
 	<string>Donate to PeterDev</string>
 	<key>SUPPORT_ME</key>
 	<string>Support me!</string>
-  <key>E_MAIL</key>
-  <string>Send an e-mail.</string>
+	<key>E_MAIL</key>
+  <string>Send an E-mail to us</string>
   <key>SEND_BUG_TO_ME</key>
   <string>Send us bugs, problems or ideas.</string>
 </dict>

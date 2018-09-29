@@ -13,7 +13,11 @@
 	<key>ENABLE_SNOW_FLAKE</key>
 	<string>항상 눈오는 채팅방 활성화</string>
   <key>HIDE_GAME_TAB</key>
-  <string>게임탭 숨기기</string>
+  <string>게임별 탭 숨기기</string>
+	<key>HIDE_SHARP_SEARCH</key>
+	<string>텍스트 필드에서 #검색 숨기기</string>
+	<key>HIDE_BIRTHDAY_FRIENDS</key>
+	<string>생일인 친구 목록 숨기기</string>
 	<key>APPLY_CHANGES</key>
 	<string>변경사항 적용</string>
 	<key>ARE_YOU_SURE_TO_RESPRING</key>

@@ -31,6 +31,8 @@
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
+	<key>icon</key>
+	<string>github@2x.png</string>
 	<key>label</key>
 	<string>Github</string>
 	<key>subtitle</key>
@@ -41,6 +43,8 @@
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
+	<key>icon</key>
+	<string>paypal@2x.png</string>
 	<key>label</key>
 	<string>DONATE_TO_PETERDEV</string>
 	<key>subtitle</key>
@@ -51,6 +55,8 @@
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
+	<key>icon</key>
+	<string>email@2x.png</string>
 	<key>label</key>
 	<string>E_MAIL</string>
 	<key>subtitle</key>
