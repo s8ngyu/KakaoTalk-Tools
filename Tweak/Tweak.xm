@@ -1,9 +1,11 @@
-
-static BOOL kStorage = NO;          // 기본값
+static BOOL kEnable = YES;         //기본값
+static BOOL kStorage = NO;
 static BOOL kDarkKeyBoard = NO;
 static BOOL kSnowFlake = NO;
 static BOOL kHideGameTab = NO;
-static BOOL kEnable = YES;
+static BOOL kHideSharpSearch = NO;
+static BOOL kHideBirthdayFriends = NO;
+
 
 %hook KAODiskMonitor
 - (long long)freeSpaceInBytes {    //350MB 알림 삭제
@@ -56,6 +58,30 @@ return %orig;
   return %orig;
 }
 return %orig;
+}
+
+- (bool)isSharpSearchAvailable {
+  if(kEnable)
+  {
+    if(kHideSharpSearch)
+    {
+      return 0;
+    }
+    return %orig;
+  }
+  return %orig;
+}
+
+- (bool)showBirthdayFriends {
+  if(kEnable)
+  {
+    if(kHideBirthdayFriends)
+    {
+      return 0;
+    }
+    return %orig;
+  }
+  return %orig;
 }
 %end
 
@@ -137,6 +163,8 @@ static void loadPrefs()
         kDarkKeyBoard = ( [prefs objectForKey:@"kDarkKeyBoard"] ? [[prefs objectForKey:@"kDarkKeyBoard"] boolValue] : kDarkKeyBoard );
         kSnowFlake = ( [prefs objectForKey:@"kSnowFlake"] ? [[prefs objectForKey:@"kSnowFlake"] boolValue] : kSnowFlake );
         kHideGameTab = ( [prefs objectForKey:@"kHideGameTab"] ? [[prefs objectForKey:@"kHideGameTab"] boolValue] : kHideGameTab );
+        kHideSharpSearch = ( [prefs objectForKey:@"kHideSharpSearch"] ? [[prefs objectForKey:@"kHideSharpSearch"] boolValue] : kHideSharpSearch );
+        kHideBirthdayFriends = ( [prefs objectForKey:@"kHideBirthdayFriends"] ? [[prefs objectForKey:@"kHideBirthdayFriends"] boolValue] : kHideBirthdayFriends );
     }
     [prefs release];
 }

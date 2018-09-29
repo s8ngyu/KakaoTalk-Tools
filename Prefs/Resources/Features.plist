@@ -71,6 +71,40 @@
 			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.peterdev.kakaotalktools</string>
+			<key>key</key>
+			<string>kHideSharpSearch</string>
+			<key>label</key>
+			<string>HIDE_SHARP_SEARCH</string>
+			<key>PostNotification</key>
+			<string>com.peterdev.kakaotalktools/settingschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.peterdev.kakaotalktools</string>
+			<key>key</key>
+			<string>kHideBirthdayFriends</string>
+			<key>label</key>
+			<string>HIDE_BIRTHDAY_FRIENDS</string>
+			<key>PostNotification</key>
+			<string>com.peterdev.kakaotalktools/settingschanged</string>
+		</dict>
+
+<!--Tweak Setting-->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
 			<key>action</key>
 			<string>killkakaotalk:</string>
 			<key>cell</key>
@@ -99,6 +133,7 @@
     	<key>label</key>
     	<string>RESPRING</string>
     </dict>
+
 <!--Links-->
 <dict>
 	<key>cell</key>
@@ -109,6 +144,8 @@
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
+	<key>icon</key>
+	<string>github@2x.png</string>
 	<key>label</key>
 	<string>Github</string>
 	<key>subtitle</key>
@@ -119,6 +156,8 @@
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
+	<key>icon</key>
+	<string>paypal@2x.png</string>
 	<key>label</key>
 	<string>DONATE_TO_PETERDEV</string>
 	<key>subtitle</key>
@@ -129,6 +168,8 @@
 <dict>
 	<key>cellClass</key>
 	<string>HBLinkTableCell</string>
+	<key>icon</key>
+	<string>email@2x.png</string>
 	<key>label</key>
 	<string>E_MAIL</string>
 	<key>subtitle</key>
