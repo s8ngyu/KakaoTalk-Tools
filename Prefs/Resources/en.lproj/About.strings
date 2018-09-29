@@ -11,6 +11,10 @@
 	<string>Support me!</string>
 	<key>CONTRIBUTORS</key>
 	<string>Contributors</string>
+	<key>E_MAIL</key>
+	<string>Send an e-mail.</string>
+	<key>SEND_BUG_TO_ME</key>
+	<string>Send us bugs, problems or ideas.</string>
 </dict>
 
 </plist>

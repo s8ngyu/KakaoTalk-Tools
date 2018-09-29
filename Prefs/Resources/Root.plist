@@ -74,6 +74,12 @@
 			<string>FEATURES</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>TWEAK_SETTING</string>
+		</dict>
+		<dict>
 			<key>action</key>
 			<string>killkakaotalk:</string>
 			<key>cell</key>
@@ -161,6 +167,16 @@
 	<string>SUPPORT_ME</string>
 	<key>url</key>
 	<string>https://paypal.me/peterdev/</string>
+</dict>
+<dict>
+	<key>cellClass</key>
+	<string>HBLinkTableCell</string>
+	<key>label</key>
+	<string>E_MAIL</string>
+	<key>subtitle</key>
+	<string>SEND_BUG_TO_ME</string>
+	<key>url</key>
+	<string>mailto:djperter@icloud.com</string>
 </dict>
 <dict>
 	<key>cell</key>

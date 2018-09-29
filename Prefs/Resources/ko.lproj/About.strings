@@ -12,6 +12,10 @@
 	<string>PeterDev에게 기부하기</string>
 	<key>SUPPORT_ME</key>
 	<string>지원해주세요!</string>
+	<key>E_MAIL</key>
+	<string>이메일 보내기</string>
+	<key>SEND_BUG_TO_ME</key>
+	<string>버그나 문제점, 아이디어를 이메일로 보내주세요!</string>
 </dict>
 
 </plist>
