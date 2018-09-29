@@ -1,5 +1,6 @@
 #include "KTTRootListController.h"
 
+//Root List
 @implementation KTTRootListController
 - (instancetype)init {
     self = [super init];
@@ -43,13 +44,15 @@
 @end
 
 
-
+//About List
 @interface KTTAboutListController : HBRootListController
 @end
 
+//Features List
 @interface KTTFeaturesListController : HBRootListController
 @end
 
+//About
 @implementation KTTAboutListController
 - (id)specifiers {
     if (_specifiers == nil) {
@@ -60,6 +63,7 @@
 }
 @end
 
+//Features List
 @implementation KTTFeaturesListController
 - (id)specifiers {
     if (_specifiers == nil) {
