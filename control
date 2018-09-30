@@ -3,7 +3,7 @@ Name: KakaoTalk Tools
 Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
 Version: 2.0
 Architecture: iphoneos-arm
-Description: 카카오톡을 제어합니다.
+Description: 카카오톡의 사용을 편하게 해줍니다.
 Maintainer: PeterDev <djperter@icloud.com>
 Author: PeterDev <djperter@icloud.com>
 Section: Tweaks
