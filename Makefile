@@ -1,6 +1,5 @@
 include $(THEOS)/makefiles/common.mk
 
-
 SUBPROJECTS += Prefs Tweak
 
 include $(THEOS_MAKE_PATH)/aggregate.mk
