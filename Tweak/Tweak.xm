@@ -7,19 +7,14 @@ static BOOL kHideSharpSearch = NO;
 static BOOL kHideBirthdayFriends = NO;
 
 
-%hook KAODiskMonitor
-- (long long)freeSpaceInBytes {    //350MB 알림 삭제
-  if(kEnable)
-  {
-    if(kStorage)
-    {
-        return 256000000000;
+%group GROUP_STORAGE
+   %hook KAODiskMonitor
+    - (long long)freeSpaceInBytes {
+      return 256000000000;
     }
-    return %orig;
-  }
-  return %orig;
-}
+   %end
 %end
+
 
 %hook UITextInputTraits
 - (int)keyboardAppearance {         //키보드 다크모드
@@ -60,7 +55,7 @@ return %orig;
 return %orig;
 }
 
-- (bool)isSharpSearchAvailable {
+- (bool)isSharpSearchAvailable {      //샵검색 삭제
   if(kEnable)
   {
     if(kHideSharpSearch)
@@ -72,7 +67,7 @@ return %orig;
   return %orig;
 }
 
-- (bool)showBirthdayFriends {
+- (bool)showBirthdayFriends {       //생일친구 삭제
   if(kEnable)
   {
     if(kHideBirthdayFriends)
@@ -153,6 +148,8 @@ return %orig;
 %end
 
 
+
+
 static void loadPrefs()
 {
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
@@ -169,8 +166,15 @@ static void loadPrefs()
     [prefs release];
 }
 
+
 %ctor
 {
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.peterdev.kakaotalktools/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
     loadPrefs();
+
+    if(kEnable) {
+      if(kStorage) {
+        %init(GROUP_STORAGE);
+      }
+    }
 }
