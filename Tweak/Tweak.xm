@@ -1,30 +1,24 @@
-static BOOL kEnable = YES;         //기본값
-static BOOL kStorage = NO;
-static BOOL kDarkKeyBoard = NO;
-static BOOL kSnowFlake = NO;
-static BOOL kHideGameTab = NO;
-static BOOL kHideSharpSearch = NO;
-static BOOL kHideBirthdayFriends = NO;
+bool kEnable;
+bool kStorage;
+bool kDarkKeyBoard;
+bool kSnowFlake;
+bool kHideGameTab;
+bool kHideSharpSearch;
+bool kHideBirthdayFriends;
 
-
-%group GROUP_STORAGE
-   %hook KAODiskMonitor
-    - (long long)freeSpaceInBytes {
-      return 256000000000;
-    }
-   %end
+%hook KAODiskMonitor
+- (long long)freeSpaceInBytes {   // 저장공간 알림 제거
+  if(kEnable && kStorage) {
+    return 256000000000;
+  }
+  return %orig;
+}
 %end
-
 
 %hook UITextInputTraits
 - (int)keyboardAppearance {         //키보드 다크모드
-  if(kEnable)
-  {
-  if(kDarkKeyBoard)
-  {
+  if(kEnable && kDarkKeyBoard) {
     return 1;
-  }
-    return %orig;
   }
   return %orig;
 }
@@ -32,49 +26,29 @@ static BOOL kHideBirthdayFriends = NO;
 
 %hook KakaoProperties
 - (bool)isSnowFlakeAvailable {      //눈내리는 채팅방
-  if(kEnable)
-  {
-  if(kSnowFlake)
-  {
+  if(kEnable && kSnowFlake) {
     return 1;
   }
   return %orig;
 }
-return %orig;
-}
 
 - (bool)isGameTabAvailable {        //게임탭 삭제
-  if(kEnable)
-  {
-  if(kHideGameTab)
-  {
+  if(kEnable && kHideGameTab) {
     return 0;
   }
   return %orig;
 }
-return %orig;
-}
 
 - (bool)isSharpSearchAvailable {      //샵검색 삭제
-  if(kEnable)
-  {
-    if(kHideSharpSearch)
-    {
-      return 0;
-    }
-    return %orig;
+  if(kEnable && kHideSharpSearch) {
+    return 0;
   }
   return %orig;
 }
 
 - (bool)showBirthdayFriends {       //생일친구 삭제
-  if(kEnable)
-  {
-    if(kHideBirthdayFriends)
-    {
-      return 0;
-    }
-    return %orig;
+  if(kEnable && kHideBirthdayFriends) {
+    return 0;
   }
   return %orig;
 }
@@ -82,69 +56,46 @@ return %orig;
 
 %hook KUIBackgroundView
 - (bool)canShowSnowFlake {          //눈내리는 채팅방
-  if(kEnable)
-  {
-  if(kSnowFlake)
-  {
+  if(kEnable && kSnowFlake) {
     return 1;
   }
   return %orig;
-}
-return %orig;
 }
 %end
 
 %hook KAOSnowAccumlatingScene       //눈내리는 채팅방
 - (id)touchPoint {
-  if(kEnable)
-  {
-  if(kSnowFlake)
-  {
+  if(kEnable && kSnowFlake) {
     return %orig;
   }
   return %orig;
 }
-return %orig;
-}
 
 - (void)setTouchPoint:(id)arg1 {     //눈내리는 채팅방
-  if(kEnable)
-  {
-  if(kSnowFlake)
+  if(kEnable && kSnowFlake)
   {
     arg1 = NULL;
     %orig;
   }
   return %orig;
 }
-return %orig;
-}
 
 - (double)bottomOffset {             //눈내리는 채팅방
-  if(kEnable)
-  {
-  if(kSnowFlake)
+  if(kEnable && kSnowFlake)
   {
     return %orig;
   }
   return %orig;
 }
-return %orig;
-}
 
 - (void)setBottomOffset:(double)arg1 {//눈내리는 채팅방
-  if(kEnable)
-  {
-  if(kSnowFlake)
+  if(kEnable && kSnowFlake)
   {
     arg1 = -100;
     %orig;
   }
   return %orig;
-  }
-return %orig;
 }
-
 %end
 
 
@@ -152,29 +103,21 @@ return %orig;
 
 static void loadPrefs()
 {
-    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
-    if(prefs)
-    {
-        kEnable = ( [prefs objectForKey:@"kEnable"] ? [[prefs objectForKey:@"kEnable"] boolValue] : kEnable );
-        kStorage = ( [prefs objectForKey:@"kStorage"] ? [[prefs objectForKey:@"kStorage"] boolValue] : kStorage );
-        kDarkKeyBoard = ( [prefs objectForKey:@"kDarkKeyBoard"] ? [[prefs objectForKey:@"kDarkKeyBoard"] boolValue] : kDarkKeyBoard );
-        kSnowFlake = ( [prefs objectForKey:@"kSnowFlake"] ? [[prefs objectForKey:@"kSnowFlake"] boolValue] : kSnowFlake );
-        kHideGameTab = ( [prefs objectForKey:@"kHideGameTab"] ? [[prefs objectForKey:@"kHideGameTab"] boolValue] : kHideGameTab );
-        kHideSharpSearch = ( [prefs objectForKey:@"kHideSharpSearch"] ? [[prefs objectForKey:@"kHideSharpSearch"] boolValue] : kHideSharpSearch );
-        kHideBirthdayFriends = ( [prefs objectForKey:@"kHideBirthdayFriends"] ? [[prefs objectForKey:@"kHideBirthdayFriends"] boolValue] : kHideBirthdayFriends );
-    }
-    [prefs release];
+  NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
+  if(prefs)
+  {
+    kEnable = [[prefs objectForKey:@"kEnable"] boolValue];
+    kStorage = [[prefs objectForKey:@"kStorage"] boolValue];
+    kDarkKeyBoard = [[prefs objectForKey:@"kDarkKeyBoard"] boolValue];
+    kSnowFlake = [[prefs objectForKey:@"kSnowFlake"] boolValue];
+    kHideGameTab = [[prefs objectForKey:@"kHideGameTab"] boolValue];
+    kHideSharpSearch = [[prefs objectForKey:@"kHideSharpSearch"] boolValue];
+    kHideBirthdayFriends = [[prefs objectForKey:@"kHideBirthdayFriends"] boolValue];
+  }
+  [prefs release];
 }
 
-
-%ctor
-{
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.peterdev.kakaotalktools/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-    loadPrefs();
-
-    if(kEnable) {
-      if(kStorage) {
-        %init(GROUP_STORAGE);
-      }
-    }
+%ctor {
+  CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.peterdev.kakaotalktools/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+  loadPrefs();
 }
