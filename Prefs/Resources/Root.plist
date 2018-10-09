@@ -2,18 +2,42 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>title</key>
+	<string>KakaoTalk Tools</string>
 	<key>items</key>
 	<array>
 
 <!--Banner-->
-	  <dict>
+	  <!--<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>headerCellClass</key>
 			<string>HBImageTableCell</string>
 			<key>icon</key>
 			<string>banner.png</string>
-		</dict>
+		</dict>-->
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>headerCellClass</key>
+	<string>HBPackageNameHeaderCell</string>
+  <!--<key>icon</key>
+	<string>icon@2x.png</string>-->
+	<key>packageIdentifier</key>
+	<string>com.peterdev.kakaotalktools</string>
+	<!--<key>hasGradient</key>
+	<true/>-->
+	<key>backgroundGradientColors</key>
+	<array>
+		<string>#ffe259</string>
+		<string>#ffa751</string>
+	</array>
+	<key>titleColor</key>
+	<string>#ffffff</string>
+	<key>subtitleColor</key>
+	<string>#ffffff</string>
+</dict>
+
 
 <!--Credits-->
     <dict>
@@ -73,11 +97,29 @@
 			<key>label</key>
 			<string>FEATURES</string>
 		</dict>
+
+		<!--Tweak Settings-->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>TWEAK_SETTING</string>
+			<key>footerText</key>
+			<string>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.peterdev.kakaotalktools</string>
+			<key>key</key>
+			<string>kDarkModeSettings</string>
+			<key>label</key>
+			<string>DARK_MODE_SETTINGS</string>
+			<key>PostNotification</key>
+			<string>com.peterdev.kakaotalktools/settingschanged</string>
 		</dict>
 		<dict>
 			<key>action</key>

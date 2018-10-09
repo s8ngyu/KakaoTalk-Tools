@@ -6,6 +6,8 @@
   <string>개발자</string>
 	<key>FEATURES</key>
 	<string>기능</string>
+  <key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
+  <string>일부 설정은 변경사항 적용을 두번하셔야 할 수 있습니다.</string>
   <key>ENABLE</key>
   <string>활성화</string>
   <key>APPLY_CHANGES</key>
@@ -40,6 +42,8 @@
   <string>이메일 보내기</string>
   <key>SEND_BUG_TO_ME</key>
   <string>버그나 문제점, 아이디어를 이메일로 보내주세요!</string>
+  <key>DARK_MODE_SETTINGS</key>
+  <string>설정창 다크 모드</string>
 </dict>
 
 </plist>

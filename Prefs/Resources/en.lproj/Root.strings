@@ -4,6 +4,8 @@
 <dict>
   <key>DEVELOPER</key>
   <string>Developer</string>
+  <key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
+  <string>You might need to Apply Changes twice.</string>
 	<key>FEATURES</key>
 	<string>Features</string>
   <key>ENABLE</key>
@@ -40,6 +42,8 @@
   <string>Send an E-mail to us</string>
   <key>SEND_BUG_TO_ME</key>
   <string>Send us bugs, problems or ideas.</string>
+  <key>DARK_MODE_SETTINGS</key>
+  <string>Dark Mode for Settings Pane</string>
 </dict>
 
 </plist>
