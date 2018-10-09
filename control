@@ -3,6 +3,7 @@ Name: KakaoTalk Tools
 Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
 Version: 2.1
 Architecture: iphoneos-arm
+Icon: file:///Library/PreferenceBundles/KakaoTalkToolsPrefs.bundle/icon-large.png
 Description: 카카오톡의 사용을 편하게 해줍니다.
 Maintainer: PeterDev <djperter@icloud.com>
 Author: PeterDev <djperter@icloud.com>

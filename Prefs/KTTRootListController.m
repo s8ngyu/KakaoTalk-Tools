@@ -57,6 +57,7 @@ bool kDarkModeSettings;
     loadPrefs();
 	}
 	return _specifiers;
+  loadPrefs();
 }
 
 - (void)killkakaotalk:(id)sender {
