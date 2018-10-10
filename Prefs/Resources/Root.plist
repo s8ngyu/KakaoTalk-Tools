@@ -7,30 +7,18 @@
 	<key>items</key>
 	<array>
 
-<!--Banner-->
-	  <!--<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>headerCellClass</key>
-			<string>HBImageTableCell</string>
-			<key>icon</key>
-			<string>banner.png</string>
-		</dict>-->
+		<!--Banner-->
 <dict>
 	<key>cell</key>
 	<string>PSGroupCell</string>
 	<key>headerCellClass</key>
 	<string>HBPackageNameHeaderCell</string>
-  <!--<key>icon</key>
-	<string>icon@2x.png</string>-->
 	<key>packageIdentifier</key>
 	<string>com.peterdev.kakaotalktools</string>
-	<!--<key>hasGradient</key>
-	<true/>-->
 	<key>backgroundGradientColors</key>
 	<array>
 		<string>#ffe259</string>
-		<string>#ffa751</string>
+    <string>#ffa751</string>
 	</array>
 	<key>titleColor</key>
 	<string>#ffffff</string>
