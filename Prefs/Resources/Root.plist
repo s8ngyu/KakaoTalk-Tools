@@ -214,6 +214,8 @@
 	<key>url</key>
 	<string>mailto:djperter@icloud.com</string>
 </dict>
+
+<!--CopyRight-->
 <dict>
 	<key>cell</key>
 	<string>PSGroupCell</string>
@@ -224,6 +226,7 @@
 	<key>isStaticText</key>
 	<true/>
 </dict>
+
 	</array>
 	<key>title</key>
 	<string>KakaoTalk Tools</string>
