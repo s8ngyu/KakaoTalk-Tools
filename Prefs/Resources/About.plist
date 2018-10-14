@@ -78,7 +78,7 @@
 	<key>footerAlignment</key>
 	<string>1</string>
 	<key>footerText</key>
-	<string>© PeterDev 2018 - KakaoTalk Tools 2.1</string>
+	<string>© PeterDev 2018 - KakaoTalk Tools 2.1.1</string>
 	<key>isStaticText</key>
 	<true/>
 </dict>
