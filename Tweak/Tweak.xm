@@ -6,6 +6,22 @@ bool kHideGameTab;
 bool kHideSharpSearch;
 bool kHideBirthdayFriends;
 
+%hook TalkAppDelegate               //DRM
+-(void)applicationDidBecomeActive:(id)arg1 {
+if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.peterdev.kakaotalktools.list"])      //패키지 검사
+{
+  %orig;
+}
+else
+{
+  %orig;
+  UIAlertView *drmalert = [[UIAlertView alloc]initWithTitle:@"KakaoTalk Tools" message:@"You're using pirate version of KakaoTalk Tools, Use the Official version" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+
+  [drmalert show];                //DRM메시지 보이기
+}
+}
+%end
+
 %hook KAODiskMonitor
 - (long long)freeSpaceInBytes {   // 저장공간 알림 제거
   if(kEnable && kStorage) {
@@ -97,9 +113,6 @@ bool kHideBirthdayFriends;
   return %orig;
 }
 %end
-
-
-
 
 static void loadPrefs()
 {
