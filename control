@@ -1,7 +1,7 @@
 Package: com.peterdev.kakaotalktools
 Name: KakaoTalk Tools
 Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
-Version: 2.2
+Version: 2.2.1
 Architecture: iphoneos-arm
 Icon: https://nexusrepo.kro.kr/depictions/com.peterdev.kakaotalktools/sileo-depiction/images/icon-large.png
 Description: 카카오톡의 사용을 편하게 해줍니다.
