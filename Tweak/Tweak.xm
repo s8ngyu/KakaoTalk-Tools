@@ -114,8 +114,44 @@ else
 }
 %end
 
-static void loadPrefs()
-{
+%hook SquircleProfileImageView
+- (void)layoutSubviews {
+  #define self ((UIView*) self)
+  %orig;
+  if (self.frame.size.width == 58 & self.frame.size.height == 58) {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = 30;
+  }
+
+  if (self.frame.size.width == 50 & self.frame.size.height == 50) {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = 25;
+  }
+
+  if (self.frame.size.width == 41 & self.frame.size.height == 41) {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = 20;
+  }
+
+  if (self.frame.size.width == 34 & self.frame.size.height == 34) {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = 17;
+  }
+  #undef self
+}
+%end
+
+%hook UIImageView
+- (void)layoutSubviews {
+  if (self.frame.size.width == 24 & self.frame.size.height == 24) {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = 12;
+  }
+  %orig;
+}
+%end
+
+static void loadPrefs() {
   NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
   if(prefs)
   {
@@ -131,6 +167,7 @@ static void loadPrefs()
 }
 
 %ctor {
+  %init(SquircleProfileImageView = objc_getClass("TalkAppBase.SquircleProfileImageView"));
   CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.peterdev.kakaotalktools/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
   loadPrefs();
 }
