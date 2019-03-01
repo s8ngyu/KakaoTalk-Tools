@@ -18,6 +18,8 @@
 	<string>텍스트 필드에서 #검색 숨기기</string>
 	<key>HIDE_BIRTHDAY_FRIENDS</key>
 	<string>생일인 친구 목록 숨기기</string>
+	<key>USE_ROUND_PROFILE</key>
+  <string>둥근 프로필 이미지 사용하기</string>
 	<key>APPLY_CHANGES</key>
 	<string>변경사항 적용</string>
 	<key>ARE_YOU_SURE_TO_RESPRING</key>

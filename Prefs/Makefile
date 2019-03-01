@@ -1,7 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = KakaoTalkToolsPrefs
-$(BUNDLE_NAME)_FILES = KTTRootListController.m
+$(BUNDLE_NAME)_FILES = KTTRootListController.m KTTAboutListController.m KTTFeaturesListController.m
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
 $(BUNDLE_NAME)_FRAMEWORKS = UIKit
 $(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences

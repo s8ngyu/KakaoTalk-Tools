@@ -5,6 +5,7 @@ bool kSnowFlake;
 bool kHideGameTab;
 bool kHideSharpSearch;
 bool kHideBirthdayFriends;
+bool kMakeItRounds;
 
 %hook TalkAppDelegate               //DRM
 -(void)applicationDidBecomeActive:(id)arg1 {
@@ -116,7 +117,8 @@ else
 
 %hook SquircleProfileImageView
 - (void)layoutSubviews {
-  #define self ((UIView*) self)
+  if (kEnable & kMakeItRounds) {
+    #define self ((UIView*) self)
   %orig;
   if (self.frame.size.width == 58 & self.frame.size.height == 58) {
     self.clipsToBounds = YES;
@@ -138,16 +140,26 @@ else
     self.layer.cornerRadius = 17;
   }
   #undef self
+  } else {
+    %orig;
+  }
 }
 %end
 
 %hook UIImageView
 - (void)layoutSubviews {
-  if (self.frame.size.width == 24 & self.frame.size.height == 24) {
+  if (kEnable & kMakeItRounds) {
+    if (self.frame.size.width == 24 & self.frame.size.height == 24) {
     self.clipsToBounds = YES;
     self.layer.cornerRadius = 12;
-  }
+    }
+
+    if (self.frame.size.width == 100 & self.frame.size.height == 100) {
+      self.layer.cornerRadius = 50;
+    }
+  } else {
   %orig;
+  }
 }
 %end
 
@@ -162,6 +174,7 @@ static void loadPrefs() {
     kHideGameTab = [[prefs objectForKey:@"kHideGameTab"] boolValue];
     kHideSharpSearch = [[prefs objectForKey:@"kHideSharpSearch"] boolValue];
     kHideBirthdayFriends = [[prefs objectForKey:@"kHideBirthdayFriends"] boolValue];
+    kMakeItRounds = [[prefs objectForKey:@"kMakeItRounds"] boolValue];
   }
   [prefs release];
 }

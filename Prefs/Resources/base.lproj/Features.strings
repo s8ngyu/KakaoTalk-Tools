@@ -18,6 +18,8 @@
 	<string>Hide #Search in the Text Field</string>
 	<key>HIDE_BIRTHDAY_FRIENDS</key>
 	<string>Hide a Section of Today's Birthday Friends</string>
+	<key>USE_ROUND_PROFILE</key>
+  <string>Use round profile image</string>
 	<key>APPLY_CHANGES</key>
 	<string>Apply Changes</string>
 	<key>ARE_YOU_SURE_TO_RESPRING</key>
