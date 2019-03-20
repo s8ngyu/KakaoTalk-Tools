@@ -32,6 +32,22 @@ else
 }
 %end
 
+%group DM
+%hook KAODM
+- (long long)freeSpaceInBytes {   // 8.3.0 이후 다운로드 관련 문제 해결
+  if(kEnable && kStorage) {
+    return 256000000000;
+  }
+  return %orig;
+}
+-(void)requestUserNotificationIfRestrictionWarningNeeded {   // 8.3.0 이후 저장공간 알림 제거
+  if(!(kEnable && kStorage)) {
+    %orig;
+  }
+}
+%end
+%end
+
 %hook UITextInputTraits
 - (int)keyboardAppearance {         //키보드 다크모드
   if(kEnable && kDarkKeyBoard) {
@@ -115,6 +131,7 @@ else
 }
 %end
 
+%group PIV
 %hook SquircleProfileImageView
 - (void)layoutSubviews {
   if (kEnable & kMakeItRounds) {
@@ -162,6 +179,7 @@ else
   }
 }
 %end
+%end
 
 static void loadPrefs() {
   NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.peterdev.kakaotalktools.plist"];
@@ -180,7 +198,9 @@ static void loadPrefs() {
 }
 
 %ctor {
-  %init(SquircleProfileImageView = objc_getClass("TalkAppBase.SquircleProfileImageView"));
+  %init;
+  %init(PIV, SquircleProfileImageView = objc_getClass("TalkAppBase.SquircleProfileImageView"));
+  %init(DM, KAODM = objc_getClass("TalkAppBase.DiskMonitor"));
   CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.peterdev.kakaotalktools/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
   loadPrefs();
 }
