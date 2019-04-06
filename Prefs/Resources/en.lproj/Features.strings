@@ -6,6 +6,8 @@
 	<string>Features</string>
 	<key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
 	<string>You might need to Apply Changes twice.</string>
+	<key>BYPASS_JB_DETECTION</key>
+	<string>Bypass Jailbreak Detection</string>
 	<key>REMOVE_STORAGE_LIMIT_ALERT</key>
 	<string>Remove Storage Limit Alert</string>
 	<key>ENABLE_DARK_KEYBOARD</key>

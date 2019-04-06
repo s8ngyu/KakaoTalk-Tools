@@ -6,6 +6,8 @@
 	<string>기능</string>
 	<key>YOU_MIGHT_NEED_TO_APPLY_CHANGES_TWICE</key>
 	<string>일부 설정은 변경사항 적용을 두번하셔야 할 수 있습니다.</string>
+	<key>BYPASS_JB_DETECTION</key>
+	<string>탈옥감지 우회</string>
 	<key>REMOVE_STORAGE_LIMIT_ALERT</key>
 	<string>저장공간 부족 알림 제거</string>
 	<key>ENABLE_DARK_KEYBOARD</key>
